@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+@import url("https://fonts.googleapis.com/css?family=Orbitron:700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+a {
+  text-decoration: none;
+}
+* {
+  transition: 0.4s ease;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.rela-block {
+  display: block;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.abs-cent-text {
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.orbitron {
+  display: inline-block;
+  position: relative;
+  font-family: "Orbitron";
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 32px;
+  margin-bottom: 60px;
+}
+.orbitron::before,
+.orbitron::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+.orbitron::before {
+  left: -65%;
+}
+.orbitron::after {
+  right: -63%;
+}
+.orbitron.black-orb::before,
+.orbitron.black-orb::after {
+  background-color: #000;
+}
+.nav-bar {
+  position: fixed;
+  z-index: 100;
+  height: 110px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 6%;
+}
+.nav-logo {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  font-family: "Montserrat";
+  font-size: 24px;
+  letter-spacing: 0px;
+  color: #fff;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.nav-links-container {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+}
+.nav-link {
+  color: #999;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0 12px;
+  transition: 0.4s ease;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: #fff;
+}
+.top-section {
+  height: 100vh;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/archive/e/e1/20141028134401%21Icefields%282013.07.16%29byRyanSchroeder.jpg") no-repeat center;
+  background-size: cover;
+}
+.grad-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(transparent, rgba(0,0,0,0.9));
+}
+.top-text {
+  color: #fff;
+  top: 58%;
+  line-height: 28px;
+}
+.top-small-text {
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1100px) {
+  .big-text {
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: 14px;
+  }
+  .nav-logo {
+    left: 4%;
+  }
+  .nav-links-container {
+    right: 4%;
+  }
+  .nav-link {
+    padding: 0 6px;
+  }
+  .welcome-section {
+    background-size: 800px 580px;
+  }
+  .plan {
+    margin: 0px 8px 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .nav-bar.scrolled .nav-links-container {
+    top: 30px;
+  }
+  .nav-logo {
+    left: 50px;
+  }
+  .nav-links-container {
+    width: 140px;
+    text-align: center;
+    top: 40px;
+    transform: none;
+    right: 50px;
+  }
+}
+  .nav-links-container:hover .nav-link {
+    transition: 0.4s ease;
+    height: 100%;
+    opacity: 1;
+  }
+  .nav-link {
+    display: block;
+    height: 0;
+    opacity: 0;
+    transition: 0s ease;
+  }
+  .nav-link.active {
+    height: 100%;
+    opacity: 1;
+  }
+@media screen and (max-width: 500px) {
+  .big-text {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 6px;
+    margin-bottom: 22px;
+  }
+  .orbitron {
+    margin-bottom: 22px;
+  }
+}
