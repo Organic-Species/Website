@@ -52,7 +52,7 @@ nav .container .menu-btn {
 
 header {
     height: 100vh;
-    background: url(./img/annie-spratt-2qEv_MOltfk-unsplash.jpg)
+    background: url(./img/pawel-czerwinski-lWBZ01XRRoI-unsplash.jpg)
     center no-repeat fixed;
     background-size: cover;
     position: relative;
@@ -98,7 +98,7 @@ header h1 {
 }
 
 .h-regular {
-    color: #fff;
+    color: #001524;
     top: 40%;
     left: 42%;
     animation: text2 0.8s ease-in forwards;
@@ -176,5 +176,88 @@ header h1 {
     100% {
         opacity: 1;
         transform: translate(0, -50%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    nav .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+    .nav-links li {
+        display: block;
+        margin: 0.5em 0;
+    }
+    .social-media li:nth-child(1) {
+        margin-left: 0;
+    }
+    .social-media {
+        order: 2;
+    }
+    .nav-links {
+        order: 1;
+        padding-top: 1em;
+    }
+    nav .container .menu-btn {
+        display: inline-block;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+    nav .container .nav-toggle {
+        height: 15em;
+    }
+    .nav-background {
+        background: #fff;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .glass {
+        width: 90%;
+        height: initial;
+        min-height: 30em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+    }
+    .h-glass {
+        right: 52%;
+        top: 10%;
+        color: #1f1f1f;
+        background-attachment: initial;
+        background-size: 100% 130%;
+    }
+    .h-regular{
+        top: 30%;
+    }
+    nav .container .menu-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .glass > div {
+        margin-top: 4em;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    header {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .glass > div div:nth-child(1) {
+        display: none;
     }
 }
